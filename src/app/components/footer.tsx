@@ -9,8 +9,8 @@ const FooterSection = () => {
         <main>
             <footer className=" bg-gradient-to-r hover:to-emerald-500 from-teal-400 to-emerald-400 border-t border-dashed" >
                 <div className='text-sm flex justify-between p-4'>
-                    <div className="flex gap-x-4">
-                        <div className=""><img src="/GardenGroveW.svg" className=" w-24"></img></div>
+                    <div className=" gap-y-4">
+                        <div className=""><img src="/GardenGroveW.svg" className=" pb-2 w-24"></img></div>
                         <div className="text-slate-200 hover:text-white">Privacy</div>
                         <div className="text-slate-200 hover:text-white">Trademark</div>
                     </div>

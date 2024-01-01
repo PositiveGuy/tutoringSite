@@ -18,7 +18,7 @@
 
 .card-container {
   width: auto; /* You can adjust this as needed */
-  height: 640px;
+  height: 480px;
   aspect-ratio: 2 / 3; /* Sets the aspect ratio to 2:3 */
   display: flex;
   flex-direction: column;

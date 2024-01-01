@@ -6,14 +6,14 @@ import { IoMdArrowDroprightCircle } from "react-icons/io";
 const HeroSection = () => {
   return (
     <main>
-      <div className="grid md:grid-cols-2 lg:grid-cols-2 p-10 bg-gradient-to-r from-teal-400 to-emerald-400">
-        <div id='Meet Our Tutors' className='pb-4 md:pr-4 border-dashed md:border-r md:h-[40rem]'>
+      <div className="grid md:grid-cols-2 lg:grid-cols-2 p-10 min-h-svh bg-gradient-to-r from-teal-400 to-emerald-400">
+        <div id='Meet Our Tutors' className=' pb-4 md:pr-4'>
             <h1 className="text-white text-left md:text-right text-4xl font-bold ">Meet</h1>
             <h1 className="text-white text-left md:text-right text-4xl font-bold ">Our</h1>
             <h1 className="text-white text-left md:text-right text-4xl font-bold ">Tutors</h1>
         </div>
-        <div id='TutorCard' className="flex gap-4 md:pl-4 md:pt-0 bg-black/0">
-            <div className='flex justify-start pt-4 border-dashed border-t md:border-t-0 md:pt-0'>
+        <div id='TutorCard' className="flex gap-4 md:pt-0 bg-black/0">
+            <div className='flex bg-black/0 place-content-start pt-4 border-dashed border-t md:border-t-0 md:border-l md:pt-0 md:pl-4'>
                 <TutorCard 
                     name="Jane Doe PGY-1 IM"
                     subject="Mathematics, Statistics" 
