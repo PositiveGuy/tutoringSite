@@ -9,7 +9,7 @@ type MenuProp = {
 
 const FullScreenMenu: React.FC<MenuProp> = ({ closeMenu }) => {
     return (
-        <div className="fixed bg-black/40 top-0 left-0 w-full h-full z-50 p-4 flex justify-start items-center" 
+        <div className="fixed bg-black/40 top-0 left-0 w-full h-full z-50 p-10 flex justify-start items-center" 
              style={{ 
                  backdropFilter: 'blur(5px)', 
                  WebkitBackdropFilter: 'blur(5px)', // for Safari

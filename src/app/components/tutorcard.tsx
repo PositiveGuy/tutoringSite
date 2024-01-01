@@ -4,7 +4,6 @@ import React, { useState } from 'react';
 import { MdArrowForwardIos } from "react-icons/md";
 
 type Tutor = {
-    _id: string;
     name: string;
     subjects: string;
     about: string;
@@ -12,6 +11,7 @@ type Tutor = {
     phone: string;
     rate: string;
     imgurl: string;
+    _id: string;
 };
 
 type TutorCardProps = {
@@ -46,8 +46,8 @@ const TutorCard: React.FC<TutorCardProps> = ({ initialTutor }) => {
 
 
     return (
-        <div className="card-container bg-white rounded-lg shadow-lg brightness-90 hover:brightness-100 hover:shadow-2xl transition-all duration-300 ease-in-out">
-            <img src={tutor.imgurl} alt={`${tutor.name}`} className="card-image" />
+        <div className="card-container bg-white rounded-lg shadow-lg brightness-90 hover:brightness-100 hover:skew-x-1 hover:-skew-y-1 hover:-translate-y-3 hover:scale-105 hover:shadow-2xl transition-all duration-300 ease-in-out">
+            <img src={tutor.imgurl} alt={`${tutor.name}`} className="card-image hover:brightness-110" />
             <div className='card-content flex'>
                 <div className="py-4 pl-4 bg-black/0">
                     <h3 className="text-lg text-slate-700 hover:text-slate-950 font-semibold">{tutor.name}</h3>
@@ -60,7 +60,7 @@ const TutorCard: React.FC<TutorCardProps> = ({ initialTutor }) => {
             </div>
             <div className='flex justify-between p-4 border-t border-dashed border-slate-500'>
                     <p className='text-sm text-gray-500 hover:text-gray-700'>{tutor.email}</p>
-                    <p className='text-sm text-gray-500 hover:text-gray-700'>{tutor.phone}</p>
+                    {/*<p className='text-sm text-gray-500 hover:text-gray-700'>{tutor.phone}</p> */}
                     <p className='text-sm text-gray-500 hover:text-gray-700'>{`$${tutor.rate}/hr`}</p>
             </div>
         </div>

@@ -4,7 +4,7 @@ import TutorCard from './tutorcard'; // Adjust the path as per your file structu
 const HeroSection = () => {
   // Example initial tutor data
   const initialTutor = {
-    _id: "659266293a5ecd327a680ca0", // Replace with actual initial tutor _id
+    _id: "659266293a5ecd327a680ca0",
     name: "Jane Doe PGY-1 IM",
     subjects: "Mathematics, Statistics",
     image: "/zarina-iskarova-VkHTJgC3eW4-unsplash.jpg",
@@ -17,18 +17,22 @@ const HeroSection = () => {
 
   return (
     <main>
-      <div className="grid md:grid-cols-2 lg:grid-cols-2 p-10 min-h-svh bg-gradient-to-r from-teal-400 to-emerald-400">
-        <div id='Meet Our Tutors' className=' pb-4 md:pr-4'>
-            <h1 className="text-white text-left md:text-right text-4xl font-bold ">Meet</h1>
-            <h1 className="text-white text-left md:text-right text-4xl font-bold ">Our</h1>
-            <h1 className="text-white text-left md:text-right text-4xl font-bold ">Tutors</h1>
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 pt-10 min-h-svh bg-gradient-to-r from-teal-400 to-emerald-400">
+        <div className='grid grid-cols-1 border-dashed border-t border-b md:border-b-0 md:border-r'>
+          <div id='Meet Our Tutors' className='grid p-10 content-end md:content-normal hover:bg-gradient-to-r from-teal-400 to-emerald-500'>
+            <h1 className="md:translate-x-0 text-white text-left md:text-right text-4xl font-bold ">Meet Our Tutors</h1>
+          </div>
         </div>
-        <div id='TutorCard' className="flex gap-4 md:pt-0 bg-black/0">
-            <div className='flex bg-black/0 place-content-start pt-4 border-dashed border-t md:border-t-0 md:border-l md:pt-0 md:pl-4'>
+        <div className='md:border-t border-dashed'>
+          <div id='TutorCard' className="gap-4 md:pt-0 bg-black/0">
+            <div className='p-10'>
                 <TutorCard initialTutor={initialTutor} />
             </div>
-            {/* Removed arrow button as TutorCard now handles next tutor internally */}
+          </div>
         </div>
+        
+
+
       </div>
     </main>
   );
