@@ -2,8 +2,16 @@
 
 import React from 'react';
 
-const TutorCard = ({ name, subject, image, about, email }) => {
-    return (
+type TutorCardProps = {
+    name: string;
+    subject: string;
+    image: string;
+    about: string;
+    email: string;
+  };
+  
+  const TutorCard: React.FC<TutorCardProps> = ({ name, subject, image, about, email }) => {
+      return (  
       <div className="card-container bg-white rounded-lg shadow-lg brightness-90 hover:brightness-100 hover:shadow-2xl transition-all duration-300 ease-in-out">
         <img src={image} alt={`${name}`} className="card-image hover:saturate-150 rounded-t-lg w-full" />
         <div className="h-2/5 p-4">

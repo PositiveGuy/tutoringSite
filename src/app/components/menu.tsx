@@ -1,8 +1,13 @@
 "use client"
 
+import React from 'react';
 import { IoIosCloseCircle } from "react-icons/io";
 
-const FullScreenMenu = ({closeMenu}) => {
+type MenuProp = {
+    closeMenu: () => void;
+};
+
+const FullScreenMenu: React.FC<MenuProp> = ({ closeMenu }) => {
     return (
         <div className="fixed bg-black/40 top-0 left-0 w-full h-full z-50 p-4 flex justify-start items-center" 
              style={{ 
