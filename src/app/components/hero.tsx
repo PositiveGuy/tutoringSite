@@ -17,9 +17,9 @@ const HeroSection = () => {
 
   return (
     <main>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 pt-10 min-h-svh bg-gradient-to-r from-teal-400 to-emerald-400">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 pt-10 min-h-svh bg-gradient-to-r from-teal-600 to-emerald-600">
         <div className='grid grid-cols-1 border-dashed border-t border-b md:border-b-0 md:border-r'>
-          <div id='Meet Our Tutors' className='grid p-10 content-end md:content-normal hover:bg-gradient-to-r from-teal-400 to-emerald-500'>
+          <div id='Meet Our Tutors' className='grid p-10 content-end md:content-normal hover:bg-gradient-to-r from-teal-600 to-emerald-700'>
             <h1 className="md:translate-x-0 text-white text-left md:text-right text-4xl font-bold ">Meet Our Tutors</h1>
           </div>
         </div>

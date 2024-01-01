@@ -15,15 +15,15 @@ const FullScreenMenu: React.FC<MenuProp> = ({ closeMenu }) => {
                  WebkitBackdropFilter: 'blur(5px)', // for Safari
              }}>
             {/* Menu content here */}
-            <ul className=" text-slate-300">
+            <ul className=" text-2xl text-slate-300">
                 <li className=" hover:text-white ">Home</li>
                 <li className=" hover:text-white ">About</li>
                 <li className=" hover:text-white ">Services</li>
                 <li className=" hover:text-white ">Contact</li>
                 {/* Add more menu items as needed */}
             </ul>
-            <button onClick={closeMenu} className="text-slate-300 hover:text-white absolute top-4 right-4">
-                    <IoIosCloseCircle size={30} />
+            <button onClick={closeMenu} className="text-slate-300 hover:text-white absolute top-4 left-4">
+                    <IoIosCloseCircle size={44} />
             </button>
         </div>
     );
