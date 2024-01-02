@@ -27,14 +27,14 @@ const HeroSection = () => {
               bg-gradient-to-b from-purple-500  to-pink-500
               hover:animate-pulse ease-in-out duration-200'>
                 Meet <br /> Our <br /> Tutors
-                </h1>
+              </h1>
             </span>
           </div>
         </div>
         <div className='md:border-t border-dashed'>
           <div id='TutorCard' className="gap-4 md:pt-0 bg-black/0">
             <div className='p-10'>
-                <TutorCard initialTutor={initialTutor} />
+              <TutorCard initialTutor={initialTutor} />
             </div>
           </div>
         </div>
