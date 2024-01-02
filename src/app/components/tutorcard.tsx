@@ -1,13 +1,8 @@
 "use client"
 
 import React, { useState } from 'react';
-import { MdArrowForwardIos } from "react-icons/md";
-import { MdArrowBackIos } from "react-icons/md";
 import { IoIosArrowDroprightCircle } from "react-icons/io";
 import { IoIosArrowDropleftCircle } from "react-icons/io";
-
-
-
 
 type Tutor = {
     name: string;
@@ -50,12 +45,32 @@ const TutorCard: React.FC<TutorCardProps> = ({ initialTutor }) => {
         }
     };
 
+    const fetchPreviousTutor = async () => {
+        setIsLoading(true);
+        setError(null);
+        try {
+            const response = await fetch(`/api/previousTutor?tutorId=${tutor._id}`);
+            if (!response.ok) {
+                throw new Error('Failed to fetch previous tutor');
+            }
+            const prevTutor: Tutor = await response.json();
+            setTutor(prevTutor);
+        } catch (err) {
+            if (err instanceof Error) {
+                setError(err.message);
+            } else {
+                setError('An unexpected error occurred');
+            }
+        } finally {
+            setIsLoading(false);
+        }
+    };
 
     return (
         <div className="card-container bg-white rounded-lg shadow-lg brightness-90 hover:brightness-100 hover:skew-x-1 hover:-skew-y-1 hover:-translate-y-3 hover:scale-105 hover:shadow-2xl transition-all duration-300 ease-in-out">
             <img src={tutor.imgurl} alt={`${tutor.name}`} className="card-image hover:brightness-110" />
             <div className='card-content flex'>
-                <button onClick={fetchNextTutor} className='bg-black/0 text-slate-600 hover:text-slate-400'> 
+                <button onClick={fetchPreviousTutor} className='bg-black/0 text-slate-600 hover:text-slate-400'> 
                     <IoIosArrowDropleftCircle size={25} /> 
                 </button>
                 <div className="py-4 pl-4 bg-black/0">

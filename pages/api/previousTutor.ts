@@ -1,7 +1,7 @@
 import { NextApiRequest, NextApiResponse } from 'next';
 import { MongoClient, ObjectId } from 'mongodb';
 
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+export default async function previousTutorHandler(req: NextApiRequest, res: NextApiResponse) {
     if (!process.env.MONGODB_URI) {
         throw new Error('MONGODB_URI is not defined in your environment variables');
     }
@@ -25,15 +25,15 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
             return;
         }
 
-        console.log("Received tutorId:", tutorId);
+        console.log("Received tutorId for previous tutor:", tutorId);
 
         const currentTutorId = new ObjectId(tutorId);
-        const nextTutor = await collection.find({ _id: { $gt: currentTutorId } }).sort({ _id: 1 }).limit(1).toArray();
+        const previousTutor = await collection.find({ _id: { $lt: currentTutorId } }).sort({ _id: -1 }).limit(1).toArray();
 
-        if (nextTutor.length > 0) {
-            res.status(200).json(nextTutor[0]);
+        if (previousTutor.length > 0) {
+            res.status(200).json(previousTutor[0]);
         } else {
-            res.status(404).json({ message: 'No more tutors found' });
+            res.status(404).json({ message: 'No previous tutors found' });
         }
     } catch (error) {
         if (error instanceof Error) {
