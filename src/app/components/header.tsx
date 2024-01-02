@@ -20,7 +20,6 @@ const HeaderSection = () => {
                 <div>
                     <img src="/GardenGroveW.svg" className="w-48"></img>
                 </div>
-
             </header>
             {isMenuOpen && <FullScreenMenu closeMenu={toggleMenu} />}
         </main>

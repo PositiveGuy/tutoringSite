@@ -68,7 +68,7 @@ const TutorCard: React.FC<TutorCardProps> = ({ initialTutor }) => {
 
     return (
         <div className="card-container bg-white rounded-lg shadow-lg brightness-90 hover:brightness-100 hover:skew-x-1 hover:-skew-y-1 hover:-translate-y-3 hover:scale-105 hover:shadow-2xl transition-all duration-300 ease-in-out">
-            <img src={tutor.imgurl} alt={`${tutor.name}`} className="card-image hover:brightness-110" />
+            {/* <img src={tutor.imgurl} alt={`${tutor.name}`} className="card-image hover:brightness-110" /> */}
             <div className='card-content flex'>
                 <button onClick={fetchPreviousTutor} className='bg-black/0 text-slate-600 hover:text-slate-400'> 
                     <IoIosArrowDropleftCircle size={25} /> 

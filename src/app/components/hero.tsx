@@ -20,7 +20,15 @@ const HeroSection = () => {
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 min-h-svh bg-gradient-to-r from-teal-600 to-emerald-700">
         <div className='grid grid-cols-1 border-dashed border-t border-b md:border-b-0 md:border-r'>
           <div id='Meet Our Tutors' className='grid p-10 content-end md:content-normal hover:bg-gradient-to-r from-teal-600 to-emerald-500'>
-            <h1 className="md:translate-x-0 text-white text-left md:text-right text-4xl font-bold ">Meet Our Tutors</h1>
+            <span className="md:translate-x-0 text-left md:text-right text-4xl font-bold ">
+              <h1 className='className="
+              md:translate-x-0 
+              bg-clip-text text-transparent
+              bg-gradient-to-b from-purple-500  to-pink-500
+              hover:animate-pulse ease-in-out duration-200'>
+                Meet <br /> Our <br /> Tutors
+                </h1>
+            </span>
           </div>
         </div>
         <div className='md:border-t border-dashed'>
@@ -30,9 +38,6 @@ const HeroSection = () => {
             </div>
           </div>
         </div>
-        
-
-
       </div>
     </main>
   );
