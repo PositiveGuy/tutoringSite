@@ -35,6 +35,24 @@
   height: 40%; /* Remaining space for content */
 }
 
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px; /* Example width */
+  height: 50px; /* Example height */
+  background-color: black;
+  color: slategray;
+  border: none; /* Removes default border */
+  padding: 0; /* Removes default padding */
+}
+
+.button:hover {
+  color: slategray;
+  background-color: slate-800;
+}
+
+
 
 
 body {

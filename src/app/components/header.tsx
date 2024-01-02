@@ -13,7 +13,7 @@ const HeaderSection = () => {
 
     return (
         <main>
-            <header className='flex justify-between bg-gradient-to-r from-teal-600 to-emerald-600 p-4'> 
+            <header className='flex justify-between bg-gradient-to-r from-teal-600 to-emerald-600 p-10'> 
                 <div onClick={toggleMenu} className="cursor-pointer text-slate-200 hover:text-white">
                     <GiHamburgerMenu size={44} />
                 </div>

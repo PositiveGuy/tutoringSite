@@ -22,7 +22,7 @@ const FullScreenMenu: React.FC<MenuProp> = ({ closeMenu }) => {
                 <li className=" hover:text-white ">Contact</li>
                 {/* Add more menu items as needed */}
             </ul>
-            <button onClick={closeMenu} className="text-slate-300 hover:text-white absolute top-4 left-4">
+            <button onClick={closeMenu} className="text-slate-300 hover:text-white absolute top-10 left-10">
                     <IoIosCloseCircle size={44} />
             </button>
         </div>
